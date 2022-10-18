@@ -1,0 +1,2 @@
+unicode = u"\U0001F600\U0001F606\U0001F607"
+print(unicode)
