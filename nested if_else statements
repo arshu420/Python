@@ -1,0 +1,17 @@
+#If ELse Sstatements
+email = input("Enter your email : ")
+if '@' in email:
+    password = input("Enter your password : ")
+    if email == "arshman@gmail.com" and password == "1234":
+        print("Welcome")
+    elif email != "arshman@gmail.com" and password == "1234":
+        print("Wrong Email")
+    elif email == "arshman@gmail.com" and password != "1234":
+        print("Wrong Password")
+        password = input("Retype Password : ")
+        if password == "1234":
+           print("Finally Correct")
+    else:
+        print("Incorrect credentials")
+else: 
+    print("Wrong Email")
