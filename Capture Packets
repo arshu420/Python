@@ -1,0 +1,13 @@
+import pyshark
+
+def packet_callback(pkt):
+    print("Packet Captured:")
+    print(pkt)
+
+# Specify the network interface and packet filter
+interface = 'eth0'  # Change this to the appropriate interface
+packet_filter = 'tcp'  # Change this to the desired packet filter
+
+# Start capturing packets
+capture = pyshark.LiveCapture(interface=interface, display_filter=packet_filter)
+capture.apply_on_packets(packet_callback)
